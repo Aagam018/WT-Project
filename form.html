@@ -1,0 +1,30 @@
+.Feedback
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form</title>
+</head>
+<body>
+    <h2>Feedback</h2>
+    <div class="mb-4 small">
+        Please provide your feedback in the form below
+    </div>
+    <form name="feedback_form" action="data_insert.php" id="feedback_form" method="post">
+        <div class="mb-4">
+            <label class="form-label" for="feedback_comments">Comments:</label>
+            <textarea class="form-control" required rows="6" name="comments" id="feedback_comments"></textarea>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label class="form-label" for="feedback_name">Your Name:</label>
+                <input type="text" required name="name" class="form-control" id="feedback_name"/>
+            </div>
+            <div class="col mb-4">
+                <label class="form-label" for="feedback_email">Email:</label>
+                <input type="email" name="email" required class="form-control" id="feedback_email"/>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success btn-lg">Post</button>
+    </form>
+</body>
+</html>

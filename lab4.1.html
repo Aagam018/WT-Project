@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<title>AngularJS Enter Key Example</title>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+<script src="app.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet"
+/>
+</head>
+<body>
+<div ng-controller="SearchController" class="container">
+<h1>Search Example</h1>
+<input type="text"
+ng-model="searchTerm"
+ng-keypress="searchOnEnter($event)"
+/>
+<button ng-click="search()">Search</button>
+<p ng-show="showResults">Searching for: {{ searchTerm }}</p>
+</div>
+</body>
+</html>
